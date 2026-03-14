@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ch.popsim.WorldLoadTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-03-14T09:32:20" hostname="MAFFY" time="0.088">
+<testsuite name="ch.popsim.WorldLoadTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-03-14T10:08:55" hostname="MAFFY" time="0.155">
   <properties/>
-  <testcase name="testDistanceCalculation()" classname="ch.popsim.WorldLoadTest" time="0.016"/>
-  <testcase name="testLoadBigWorld()" classname="ch.popsim.WorldLoadTest" time="0.031"/>
-  <testcase name="testSimulationBasic()" classname="ch.popsim.WorldLoadTest" time="0.018"/>
-  <testcase name="testTravelTime()" classname="ch.popsim.WorldLoadTest" time="0.0"/>
-  <testcase name="testSaveAndReload()" classname="ch.popsim.WorldLoadTest" time="0.018"/>
-  <testcase name="testLoadSmallWorld()" classname="ch.popsim.WorldLoadTest" time="0.001"/>
+  <testcase name="testDistanceCalculation()" classname="ch.popsim.WorldLoadTest" time="0.017"/>
+  <testcase name="testLoadBigWorld()" classname="ch.popsim.WorldLoadTest" time="0.057"/>
+  <testcase name="testSimulationBasic()" classname="ch.popsim.WorldLoadTest" time="0.031"/>
+  <testcase name="testTravelTime()" classname="ch.popsim.WorldLoadTest" time="0.001"/>
+  <testcase name="testSaveAndReload()" classname="ch.popsim.WorldLoadTest" time="0.038"/>
+  <testcase name="testLoadSmallWorld()" classname="ch.popsim.WorldLoadTest" time="0.003"/>
   <system-out><![CDATA[[DEBUG_LOG] Big world loaded: 63 locations, 50 citizens
 [DEBUG_LOG] After 600 steps, time = 2026-03-14T10:00
 [DEBUG_LOG] ? Noah Anderson - Work at ? Office 1 pos=(1684, 2626)

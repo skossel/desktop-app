@@ -124,10 +124,18 @@ public class PopSimApp extends Application {
     private SplitPane createMainContent() {
         // === LEFT: Map ===
         mapCanvas = new MapCanvas();
-        StackPane mapContainer = new StackPane(mapCanvas);
+        Pane mapContainer = new Pane(mapCanvas) {
+            @Override
+            protected void layoutChildren() {
+                double w = getWidth();
+                double h = getHeight();
+                mapCanvas.setWidth(w);
+                mapCanvas.setHeight(h);
+                mapCanvas.relocate(0, 0);
+            }
+        };
         mapContainer.setStyle("-fx-background-color: #e0e0e0;");
-        mapCanvas.widthProperty().bind(mapContainer.widthProperty());
-        mapCanvas.heightProperty().bind(mapContainer.heightProperty());
+        mapContainer.setMinSize(100, 100);
 
         // === RIGHT: Lists + Editors (wireframe: citizens top, locations bottom) ===
         // -- Citizens section --
