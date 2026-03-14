@@ -13,7 +13,8 @@ public class IconPicker {
     }
 
     public static Optional<String> showLocationIcons(String current) {
-        String[] icons = {"🏠","🏢","🏥","🏫","🏋️","🎬","🛒","☕","📚","🚓","🚒","⛪","🏨"};
+        // Include 🏠 and 🏢 (from JSON data) plus all from location-symbols.txt
+        String[] icons = {"🏠","🏢","🏥","🏫","🏋️","🎬","🛒","☕","📚","🚓","🚒","⛪","🏨","🏭","🛎"};
         return showPicker("Select Location Icon", icons, current);
     }
 
@@ -25,6 +26,7 @@ public class IconPicker {
 
         FlowPane flow = new FlowPane(8, 8);
         flow.setPadding(new Insets(10));
+        flow.setPrefWrapLength(350);
         final String[] result = {null};
 
         for (String icon : icons) {

@@ -17,6 +17,7 @@ public class Citizen {
     private transient Location departureLocation;
     private transient Location destinationLocation;
     private transient Coordinate currentPosition;
+    private transient Coordinate travelStartPosition;
     private transient int travelElapsedMinutes;
     private transient int travelTotalMinutes;
     private transient String currentActivity;
@@ -64,6 +65,8 @@ public class Citizen {
     public void setTravelTotalMinutes(int travelTotalMinutes) { this.travelTotalMinutes = travelTotalMinutes; }
     public String getCurrentActivity() { return currentActivity; }
     public void setCurrentActivity(String currentActivity) { this.currentActivity = currentActivity; }
+    public Coordinate getTravelStartPosition() { return travelStartPosition; }
+    public void setTravelStartPosition(Coordinate travelStartPosition) { this.travelStartPosition = travelStartPosition; }
     public int getCurrentEventIndex() { return currentEventIndex; }
     public void setCurrentEventIndex(int currentEventIndex) { this.currentEventIndex = currentEventIndex; }
 
@@ -77,6 +80,7 @@ public class Citizen {
         this.departureLocation = null;
         this.destinationLocation = null;
         this.currentPosition = home != null ? home.getCoordinate().copy() : new Coordinate(0, 0);
+        this.travelStartPosition = null;
         this.travelElapsedMinutes = 0;
         this.travelTotalMinutes = 0;
         this.currentActivity = home != null ? "At " + home.getName() : "";

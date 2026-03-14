@@ -70,16 +70,11 @@ public class SimulationEngine {
         citizen.setCurrentActivity(event.getActivity());
 
         // Determine departure location
-        Location departure;
-        if (citizen.isTravelling()) {
-            // Currently travelling - we need to redirect
-            departure = citizen.getCurrentLocation(); // will be null if mid-travel
-        } else {
-            departure = citizen.getCurrentLocation();
-        }
+        Location departure = citizen.getCurrentLocation(); // may be null if mid-travel
 
-        if (departure != null && departure == destination) {
-            // Same location - no travel needed
+        // Check if already at destination
+        if (departure != null && (departure == destination ||
+                departure.getName().equals(destination.getName()))) {
             citizen.setTravelling(false);
             citizen.setCurrentLocation(destination);
             citizen.setCurrentPosition(destination.getCoordinate().copy());
@@ -90,19 +85,24 @@ public class SimulationEngine {
             return;
         }
 
-        // Calculate travel time
+        // Calculate travel time from current position
         Coordinate currentPos = citizen.getCurrentPosition();
+        if (currentPos == null) {
+            currentPos = citizen.getHome() != null ? citizen.getHome().getCoordinate().copy() : new Coordinate(0, 0);
+            citizen.setCurrentPosition(currentPos);
+        }
         double distance = currentPos.distanceTo(destination.getCoordinate());
         int travelMinutes = (int) Math.ceil(distance / SPEED_M_PER_MIN);
 
         if (travelMinutes == 0) {
-            // Already effectively at destination
             citizen.setTravelling(false);
             citizen.setCurrentLocation(destination);
             citizen.setCurrentPosition(destination.getCoordinate().copy());
             return;
         }
 
+        // Store departure position for interpolation
+        citizen.setTravelStartPosition(currentPos.copy());
         citizen.setTravelling(true);
         citizen.setDepartureLocation(departure);
         citizen.setDestinationLocation(destination);
@@ -121,10 +121,9 @@ public class SimulationEngine {
             return;
         }
 
-        Coordinate startPos;
-        if (citizen.getDepartureLocation() != null) {
-            startPos = citizen.getDepartureLocation().getCoordinate();
-        } else {
+        // Use stored travel start position for interpolation
+        Coordinate startPos = citizen.getTravelStartPosition();
+        if (startPos == null) {
             startPos = citizen.getCurrentPosition();
         }
 
@@ -135,11 +134,11 @@ public class SimulationEngine {
             // Arrival step: this step still counts as travelling
             // The citizen arrives but spending begins next step
             citizen.setCurrentPosition(destination.getCoordinate().copy());
-            // Mark arrival - next step will be spending time
             citizen.setTravelling(false);
             citizen.setCurrentLocation(destination);
             citizen.setDepartureLocation(null);
             citizen.setDestinationLocation(null);
+            citizen.setTravelStartPosition(null);
         } else {
             // Still travelling - update intermediate position
             Coordinate intermediate = startPos.interpolate(destination.getCoordinate(), traveled, totalDistance);

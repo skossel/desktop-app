@@ -34,7 +34,8 @@ public class ScheduleEvent {
      */
     public int calculateTravelTime(Location departureLocation) {
         if (departureLocation == null || targetLocation == null) return 0;
-        if (departureLocation == targetLocation) return 0;
+        if (departureLocation == targetLocation ||
+            departureLocation.getName().equals(targetLocation.getName())) return 0;
         double distance = departureLocation.getCoordinate().distanceTo(targetLocation.getCoordinate());
         double speedPerMinute = 5000.0 / 60.0;
         return (int) Math.ceil(distance / speedPerMinute);
