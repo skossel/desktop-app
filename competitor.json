@@ -1,11 +1,11 @@
 {
-	"Firstname": "Developer",
-	"Lastname": "Developer",
-	"Street": "Street 1",
-	"Zip": 1000,
-	"City": "City",
-	"Phone": "+41 7X XXX XX XX",
-	"EMail": "developer@domain.ch",
-	"School": "Berufsschule",
-	"Company": "Company AG"
+	"Firstname": "Sandro",
+	"Lastname": "Kossel",
+	"Street": "Mooswiesstrasse 12",
+	"Zip": 8864,
+	"City": "Reichenburg",
+	"Phone": "+41 77 461 00 00",
+	"EMail": "sandrokossel07@gmail.com",
+	"School": "Technische Berufsschule Zürich",
+	"Company": "Ergon Informatik AG"
 }
