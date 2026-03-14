@@ -1,0 +1,112 @@
+{
+  "Locations": [
+    {
+      "Icon": "🏠",
+      "Name": "Home 1",
+      "Coord": {
+        "X": 6681.0,
+        "Y": 1409.0
+      }
+    },
+    {
+      "Icon": "🏠",
+      "Name": "Home 2",
+      "Coord": {
+        "X": 1255.0,
+        "Y": 5228.0
+      }
+    },
+    {
+      "Icon": "🏢",
+      "Name": "Office 1",
+      "Coord": {
+        "X": 1684.0,
+        "Y": 2626.0
+      }
+    }
+  ],
+  "Citizens": [
+    {
+      "Icon": "👧",
+      "Firstname": "Noah",
+      "Lastname": "Anderson",
+      "Home": "Home 2",
+      "Schedule": [
+        {
+          "Time": "09:02:00",
+          "Location": "Office 1",
+          "Activity": "Work"
+        },
+        {
+          "Time": "13:15:00",
+          "Location": "Office 1",
+          "Activity": "Work"
+        },
+        {
+          "Time": "19:38:00",
+          "Location": "Home 2",
+          "Activity": "Return Home"
+        }
+      ]
+    },
+    {
+      "Icon": "👴",
+      "Firstname": "David",
+      "Lastname": "White",
+      "Home": "Home 2",
+      "Schedule": [
+        {
+          "Time": "06:36:00",
+          "Location": "Office 1",
+          "Activity": "Work"
+        },
+        {
+          "Time": "13:42:00",
+          "Location": "Office 1",
+          "Activity": "Work"
+        },
+        {
+          "Time": "20:13:00",
+          "Location": "Home 2",
+          "Activity": "Return Home"
+        }
+      ]
+    },
+    {
+      "Icon": "👴",
+      "Firstname": "Tom",
+      "Lastname": "Johnson",
+      "Home": "Home 2",
+      "Schedule": [
+        {
+          "Time": "06:09:00",
+          "Location": "Office 1",
+          "Activity": "Work"
+        },
+        {
+          "Time": "13:34:00",
+          "Location": "Office 1",
+          "Activity": "Work"
+        },
+        {
+          "Time": "19:02:00",
+          "Location": "Home 2",
+          "Activity": "Return Home"
+        }
+      ]
+    },
+    {
+      "Icon": "👦",
+      "Firstname": "Grace",
+      "Lastname": "Turner",
+      "Home": "Home 1",
+      "Schedule": [
+        {
+          "Time": "20:33:00",
+          "Location": "Home 1",
+          "Activity": "Return Home"
+        }
+      ]
+    }
+  ]
+}

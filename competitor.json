@@ -1,0 +1,11 @@
+{
+	"Firstname": "Developer",
+	"Lastname": "Developer",
+	"Street": "Street 1",
+	"Zip": 1000,
+	"City": "City",
+	"Phone": "+41 7X XXX XX XX",
+	"EMail": "developer@domain.ch",
+	"School": "Berufsschule",
+	"Company": "Company AG"
+}

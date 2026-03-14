@@ -1,0 +1,8 @@
+9[DEBUG_LOG] Big world loaded: 63 locations, 50 citizens
+6[DEBUG_LOG] After 600 steps, time = 2026-03-14T10:00
+C[DEBUG_LOG] ? Noah Anderson - Work at ? Office 1 pos=(1684, 2626)
+A[DEBUG_LOG] ? David White - Work at ? Office 1 pos=(1684, 2626)
+A[DEBUG_LOG] ? Tom Johnson - Work at ? Office 1 pos=(1684, 2626)
+E[DEBUG_LOG] ? Grace Turner - At Home 1 at ? Home 1 pos=(6681, 1409)
+%[DEBUG_LOG] Save/reload test passed
+F[DEBUG_LOG] Small world loaded successfully: 3 locations, 4 citizens

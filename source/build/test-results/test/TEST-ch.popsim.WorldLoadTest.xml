@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ch.popsim.WorldLoadTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-03-14T08:58:42" hostname="MAFFY" time="0.099">
+  <properties/>
+  <testcase name="testDistanceCalculation()" classname="ch.popsim.WorldLoadTest" time="0.014"/>
+  <testcase name="testLoadBigWorld()" classname="ch.popsim.WorldLoadTest" time="0.046"/>
+  <testcase name="testSimulationBasic()" classname="ch.popsim.WorldLoadTest" time="0.014"/>
+  <testcase name="testTravelTime()" classname="ch.popsim.WorldLoadTest" time="0.0"/>
+  <testcase name="testSaveAndReload()" classname="ch.popsim.WorldLoadTest" time="0.019"/>
+  <testcase name="testLoadSmallWorld()" classname="ch.popsim.WorldLoadTest" time="0.001"/>
+  <system-out><![CDATA[[DEBUG_LOG] Big world loaded: 63 locations, 50 citizens
+[DEBUG_LOG] After 600 steps, time = 2026-03-14T10:00
+[DEBUG_LOG] ? Noah Anderson - Work at ? Office 1 pos=(1684, 2626)
+[DEBUG_LOG] ? David White - Work at ? Office 1 pos=(1684, 2626)
+[DEBUG_LOG] ? Tom Johnson - Work at ? Office 1 pos=(1684, 2626)
+[DEBUG_LOG] ? Grace Turner - At Home 1 at ? Home 1 pos=(6681, 1409)
+[DEBUG_LOG] Save/reload test passed
+[DEBUG_LOG] Small world loaded successfully: 3 locations, 4 citizens
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
